@@ -369,18 +369,18 @@
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>0.8.14</version>
                 </plugin>
-<!--                <plugin>-->
-<!--                    <groupId>com.mycila</groupId>-->
-<!--                    <artifactId>license-maven-plugin</artifactId>-->
-<!--                    <version>5.0.0</version>-->
-<!--                    <dependencies>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.mycila</groupId>-->
-<!--                            <artifactId>license-maven-plugin-git</artifactId>-->
-<!--                            <version>5.0.0</version>-->
-<!--                        </dependency>-->
-<!--                    </dependencies>-->
-<!--                </plugin>-->
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>5.0.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.mycila</groupId>
+                            <artifactId>license-maven-plugin-git</artifactId>
+                            <version>5.0.0</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
@@ -575,7 +575,8 @@
             <id>license-check</id>
             <activation>
                 <property>
-                    <name>!skipLicenseCheck</name>
+<!--                    <name>!skipLicenseCheck</name>-->
+                    <name>!skipTests</name>
                 </property>
             </activation>
             <build>
